@@ -40,7 +40,7 @@ export default function Notes() {
       <div className="row my-2">
         {notes.length > 0 && (
           <>
-            <h2>Your Notes</h2>
+            <h2>Your Tasks</h2>
             {notes.map((note, index) => {
               return (
                 <div className="col-md-3" key={index}>
@@ -125,7 +125,7 @@ export default function Notes() {
             >
               <div className="modal-header">
                 <h1 className="modal-title fs-5" id="exampleModalLabel">
-                  Edit Note
+                  Edit Task
                 </h1>
                 <button
                   type="button"
@@ -190,7 +190,7 @@ export default function Notes() {
                   className="btn btn-primary"
                   data-bs-dismiss="modal"
                 >
-                  Update Note
+                  Update Task
                 </button>
               </div>
             </form>

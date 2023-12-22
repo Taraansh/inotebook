@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <div className="my-2">
-        <h2>Add a Note</h2>
+        <h2>Add a Task</h2>
         <form
           className="my-1"
           onSubmit={(e) => handleAddNote(e, title, description, tag)}

@@ -4,17 +4,15 @@ import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import NoteState from "./context/notes/NoteState";
-import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
 function App() {
   return (
     <>
-        <BrowserRouter>
-      <NoteState>
+      <BrowserRouter>
+        <NoteState>
           <Navbar />
-          <Alert message="Hello"/>
           <div className="container">
             <Routes>
               <Route exact path="/" element={<Home />} />
@@ -23,8 +21,8 @@ function App() {
               <Route exact path="/Signup" element={<Signup />} />
             </Routes>
           </div>
-      </NoteState>
-        </BrowserRouter>
+        </NoteState>
+      </BrowserRouter>
     </>
   );
 }
