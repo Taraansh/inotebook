@@ -18,7 +18,7 @@ const NoteState = (props) => {
     if (user) {
       try {
         const response = await fetch(
-          "http://127.0.0.1:5000/api/notes/addnote",
+          "https://tasklist-154z.onrender.com/api/notes/addnote",
           {
             method: "POST",
             headers: {
@@ -58,7 +58,7 @@ const NoteState = (props) => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/notes/updatenote/${id}`,
+        `https://tasklist-154z.onrender.com/api/notes/updatenote/${id}`,
         {
           method: "PUT",
           headers: {
@@ -85,7 +85,7 @@ const NoteState = (props) => {
   const handleFetchAllNotes = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/notes/fetchallnotes",
+        "https://tasklist-154z.onrender.com/api/notes/fetchallnotes",
         {
           method: "GET",
           headers: {
@@ -111,7 +111,7 @@ const NoteState = (props) => {
     try {
       console.log(id);
       const response = await fetch(
-        `http://127.0.0.1:5000/api/notes/deletenote/${id}`,
+        `https://tasklist-154z.onrender.com/api/notes/deletenote/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -132,16 +132,19 @@ const NoteState = (props) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: e.target.email.value,
-          password: e.target.password.value,
-        }),
-      });
+      const response = await fetch(
+        "https://tasklist-154z.onrender.com/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: e.target.email.value,
+            password: e.target.password.value,
+          }),
+        }
+      );
 
       const json = await response.json();
       console.log(json);
@@ -168,7 +171,7 @@ const NoteState = (props) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/auth/createuser",
+        "https://tasklist-154z.onrender.com/api/auth/createuser",
         {
           method: "POST",
           headers: {
